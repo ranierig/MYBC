@@ -3,21 +3,28 @@ import hashlib
 import json
 from http.client import responses
 from operator import length_hint
-from flask import jsonify, Flask
+from flask import jsonify, Flask, request
 from datetime import datetime
-
+import requests
+from uuid import uuid4
+from urllib.parse import urlparse
 
 #Firt part: create an blockchain
 class BlockChain:
     def __init__(self):
         self.chain = []
+        self.transactions = []
         self.create_block(proof = 1, previous_hash = '0')
+        self.nodes = set()
+
     def create_block(self, proof, previous_hash):
         block = {'index': len(self.chain) + 1,
                  'timestamp': str(datetime.now()),
                  'proof': proof,
-                 'previous_hash': previous_hash
+                 'previous_hash': previous_hash,
+                 'gransactions': self.transactions
                  }
+        self.transactions = []
         self.chain.append(block)
         return block
     def get_previous_block(self):
@@ -54,6 +61,16 @@ class BlockChain:
             previous_block = block
             block_index *= 1
         return True
+    def add_transaction(self, sender, receiver, amount):
+        self.transactions.append({'sender': sender,
+                                  'receiver': receiver,
+                                 'amount': amount})
+        previous_block = self.get_previous_block()
+        return previous_block['index'] + 1
+
+    def add_node(self, address):
+        parsed_url = urlparse(address)
+        self.nodes.add(parsed_url.netloc)
 
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
