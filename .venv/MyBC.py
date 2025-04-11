@@ -22,7 +22,7 @@ class BlockChain:
                  'timestamp': str(datetime.now()),
                  'proof': proof,
                  'previous_hash': previous_hash,
-                 'gransactions': self.transactions
+                 'transactions': self.transactions
                  }
         self.transactions = []
         self.chain.append(block)
@@ -72,9 +72,29 @@ class BlockChain:
         parsed_url = urlparse(address)
         self.nodes.add(parsed_url.netloc)
 
+    def replace_chain(self):
+        network = self.nodes
+        longest_chain = None
+        max_length = len(self.chain)
+        for node in network:
+            response = requests.get(f'http://{node}/get_chain')
+            if response.status_code == 200:
+                length = response.json()['length']
+                chain = response.json()['chain']
+                if length > max_length and self.is_chain_valid(chain):
+                    max_length = length
+                    longest_chain = chain
+        if longest_chain:
+            self.chain = longest_chain
+            return True
+        return False
+
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 #Instanciar
+node_addresss = str(uuid4()).replace('-','')
+
+
 blockchain = BlockChain()
 @app.route('/mine_block', methods = ['GET'])
 
@@ -83,12 +103,14 @@ def mine_block():
     previous_proof = previous_block['proof']
     proof = blockchain.proof_of_work(previous_proof)
     previous_hash = blockchain.hash(previous_block)
+    blockchain.add_transaction(sender=node_addresss, receiver='Ranieri',amount=1)
     block = blockchain.create_block(proof, previous_hash)
     response = {'message': 'Parabéns você minerou um bloco.',
                 'index': block['index'],
                 'timestamp': block['timestamp'],
                 'proof': block['proof'],
-                'previous_hash': block['previous_hash']}
+                'previous_hash': block['previous_hash'],
+                'transaction': block['transaction']}
     return jsonify(response), 200
 
 @app.route('/get_chain', methods = ['GET'])
@@ -106,5 +128,22 @@ def is_valid():
     else:
         response = {'message': 'Blockchain inválido.'}
     return jsonify(response), 200
+
+@app.route('/add_transaction', methods = ['POST'])
+def add_transaction():
+    json = request.get_json()
+    transaction_keys = ['sender', 'receiver', 'amount']
+    if not all(key in json for key in intransaction_keys):
+        return 'Alguns elementos estão faltando', 400
+    index = blockchain.add_transaction(json['sender'], json['receiver'], json['amount'])
+    response = {'messege': f'Esta transacao sera adicionada ao bloco {index}'}
+    return jsonify(response), 201
+
+
+
+
+
+
+
 
 app.run(host = '0.0.0.0', port=5000)

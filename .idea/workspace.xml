@@ -7,7 +7,6 @@
     <list default="true" id="92b4e501-e192-4b68-a73d-ed78d69c332e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/MyBC.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/MyBC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postman/BC.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/postman/BC.postman_collection.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
