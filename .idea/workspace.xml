@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92b4e501-e192-4b68-a73d-ed78d69c332e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.venv/MyBC5001.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/MyBC5002.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/MyBC5003.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodes.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/MyBC.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/MyBC.py" afterDir="false" />
     </list>
@@ -23,10 +27,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2uy5GlfqEbKk3efOSJ3YpL3FrTq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,12 +45,21 @@
   "keyToString": {
     "Python.HadCoin.executor": "Run",
     "Python.MyBC.executor": "Run",
+    "Python.MyBC5001.executor": "Run",
+    "Python.MyBC5002.executor": "Run",
+    "Python.MyBC5003.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "modulo2",
-    "ignore.virus.scanning.warn.message": "true"
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Ranie/OneDrive/Estudos/SISTEMAS/UDEMY/BLOCKCHAIN/UDEMY/MYBC/.venv"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ranie\OneDrive\Estudos\SISTEMAS\UDEMY\BLOCKCHAIN\UDEMY\MYBC\.venv" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

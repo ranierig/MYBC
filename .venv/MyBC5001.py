@@ -59,7 +59,7 @@ class BlockChain:
             if hash_operation[:4] != '0000':
                 return False
             previous_block = block
-            block_index *= 1
+            block_index += 1
         return True
     def add_transaction(self, sender, receiver, amount):
         self.transactions.append({'sender': sender,
@@ -110,11 +110,7 @@ def mine_block():
                 'timestamp': block['timestamp'],
                 'proof': block['proof'],
                 'previous_hash': block['previous_hash'],
-<<<<<<< HEAD
-                'transaction': block['transaction']}
-=======
                 'transactions': block['transactions']}
->>>>>>> 4d4ef7e (modulo2)
     return jsonify(response), 200
 
 @app.route('/get_chain', methods = ['GET'])
@@ -137,17 +133,12 @@ def is_valid():
 def add_transaction():
     json = request.get_json()
     transaction_keys = ['sender', 'receiver', 'amount']
-    if not all(key in json for key in intransaction_keys):
+    if not all(key in json for key in transaction_keys):
         return 'Alguns elementos estão faltando', 400
     index = blockchain.add_transaction(json['sender'], json['receiver'], json['amount'])
     response = {'messege': f'Esta transacao sera adicionada ao bloco {index}'}
     return jsonify(response), 201
 
-<<<<<<< HEAD
-
-
-
-=======
 @app.route('/connect_node', methods = ['POST'])
 def connect_node():
     json = request.get_json()
@@ -168,9 +159,8 @@ def replace_chain():
         response = {'message': 'tudo certo, não houve substituicao',
                     'actual_chain': blockchain.chain}
     return jsonify(response), 201
->>>>>>> 4d4ef7e (modulo2)
 
 
 
 
-app.run(host = '0.0.0.0', port=5000)
+app.run(host = '0.0.0.0', port=5001)
