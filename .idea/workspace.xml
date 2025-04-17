@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92b4e501-e192-4b68-a73d-ed78d69c332e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.venv/MyBC5001.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/MyBC5002.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/MyBC5003.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/MyBC.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/MyBC.py" afterDir="false" />
-    </list>
+    <list default="true" id="92b4e501-e192-4b68-a73d-ed78d69c332e" name="Changes" comment="modulo2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,20 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.HadCoin.executor": "Run",
-    "Python.MyBC.executor": "Run",
-    "Python.MyBC5001.executor": "Run",
-    "Python.MyBC5002.executor": "Run",
-    "Python.MyBC5003.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "modulo2",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Ranie/OneDrive/Estudos/SISTEMAS/UDEMY/BLOCKCHAIN/UDEMY/MYBC/.venv"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.HadCoin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MyBC.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MyBC5001.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MyBC5002.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MyBC5003.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;modulo2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ranie/OneDrive/Estudos/SISTEMAS/UDEMY/BLOCKCHAIN/UDEMY/MYBC/.venv&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ranie\OneDrive\Estudos\SISTEMAS\UDEMY\BLOCKCHAIN\UDEMY\MYBC\.venv" />
@@ -76,6 +69,19 @@
       <option name="presentableId" value="Default" />
       <updated>1743207879460</updated>
     </task>
+    <task id="LOCAL-00001" summary="modulo2">
+      <option name="closed" value="true" />
+      <created>1744886301910</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744886301910</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modulo2" />
+    <option name="LAST_COMMIT_MESSAGE" value="modulo2" />
   </component>
 </project>
